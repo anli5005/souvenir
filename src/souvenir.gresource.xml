@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/dev/anli/linux/souvenir">
+    <file>css/style.css</file>
+    <file>ui/cell.ui</file>
+    <file>ui/window.ui</file>
+  </gresource>
+</gresources>

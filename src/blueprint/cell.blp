@@ -1,0 +1,13 @@
+using Gtk 4.0;
+
+template $PhotoCell : Gtk.Widget {
+    styles ["photo-cell"]
+
+    Gtk.Picture image {
+        hexpand: true;
+        vexpand: true;
+        visible: false;
+        accessible-role: img;
+        content-fit: cover;
+    }
+}

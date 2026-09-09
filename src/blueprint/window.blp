@@ -1,0 +1,40 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SouvenirWindow : Adw.ApplicationWindow {
+    default-width: 800;
+    default-height: 600;
+
+    title: _("Souvenir");
+
+    Adw.ToolbarView {
+        [top]
+        Adw.HeaderBar header_bar {
+            [start]
+            Gtk.MenuButton {
+                menu-model: primary_menu;
+                primary: true;
+                icon-name: "open-menu-symbolic";
+                tooltip-text: _("Menu");
+            }
+        }
+
+        Gtk.ScrolledWindow {
+            Gtk.GridView grid {
+                styles ["main-grid"]
+
+                min-columns: 1;
+                max-columns: 10;
+            }
+        }
+    }
+}
+
+menu primary_menu {
+    section {
+        item {
+            label: _("About Souvenir");
+            action: "app.about";
+        }
+    }
+}
